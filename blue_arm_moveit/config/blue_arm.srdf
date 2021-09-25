@@ -50,4 +50,5 @@
     <disable_collisions link1="link_5" link2="link_6" reason="Adjacent" />
     <disable_collisions link1="link_5" link2="link_7" reason="Never" />
     <disable_collisions link1="link_6" link2="link_7" reason="Adjacent" />
+    <disable_collisions link1="link_7" link2="suck_tool_joint" reason="Adjacent" />
 </robot>
