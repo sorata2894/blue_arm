@@ -33,7 +33,7 @@ blue_arm_controller:
     - joint_7
   constraints:
       goal_time: 1
-      stopped_velocity_tolerance: 0.05
+      stopped_velocity_tolerance: 0.1
       joint_1: {trajectory: 0.1, goal: 0.1}
       joint_2: {trajectory: 0.1, goal: 0.1}
       joint_3: {trajectory: 0.1, goal: 0.1}

@@ -504,7 +504,7 @@
   </link>
   <joint
     name="suck_tool_joint"
-    type="revolute">
+    type="fixed">
     <origin
       xyz="0 -0.013 0.013"
       rpy="0 1.57 0" />
@@ -514,12 +514,44 @@
       link="suck_tool" />
     <axis
       xyz="-1 0 0" />
-    <limit
-      lower="-3.1415926"
-      upper="3.1415926"
-      effort="1000"
-      velocity="2.77" />
   </joint>
+
+  <!-- <link name = "pocker_place">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue_arm_description/meshes/pocker_place_A1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1 0.6 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue_arm_description/meshes/pocker_place_A1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pocker_place_joint"
+    type="fixed">
+    <origin
+      xyz="0.38 -0.25 0.01"
+      rpy="2.03 0 1.6" />
+    <parent
+      link="world" />
+    <child
+      link="pocker_place" />
+  </joint> -->
 
 </robot>
 

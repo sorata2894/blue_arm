@@ -450,4 +450,68 @@
       effort="0"
       velocity="0" />
   </joint>
+  
+
+
+<link
+    name="suck_tool">
+    <inertial>
+      <origin
+        xyz="-0.35508 -0.0025947 -0.026841"
+        rpy="0 0 0" />
+      <mass
+        value="6.3956" />
+      <inertia
+        ixx="0.01645"
+        ixy="-0.0011027"
+        ixz="-0.017005"
+        iyy="0.15129"
+        iyz="0.00032406"
+        izz="0.14249" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bluearm_urdf_3/meshes/suck_model.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bluearm_urdf_3/meshes/suck_model.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="suck_tool"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_7" />
+    <child
+      link="suck_tool" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+
+
 </robot>

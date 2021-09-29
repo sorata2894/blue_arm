@@ -28,9 +28,11 @@ int main(int argc, char** argv)
 
 	ros::Rate loop_rate(blue_arm->sample_rate);
 	while (ros::ok()){
+		ros::Time start = ros::Time::now();
 		blue_arm->process(loop_rate);
 		ros::spinOnce();
 		loop_rate.sleep();
+		std::cout<<"loop_time = "<<(ros::Time::now() - start).toSec() * 1000<<" ms"<<std::endl;
 	}
 	spinner.stop();
 	return 0;
